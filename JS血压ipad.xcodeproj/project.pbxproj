@@ -1,0 +1,732 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F01FB71183A183300F38138 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F01FB70183A183300F38138 /* Foundation.framework */; };
+		0F01FB73183A183300F38138 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F01FB72183A183300F38138 /* CoreGraphics.framework */; };
+		0F01FB75183A183300F38138 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F01FB74183A183300F38138 /* UIKit.framework */; };
+		0F01FB7B183A183300F38138 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FB79183A183300F38138 /* InfoPlist.strings */; };
+		0F01FB7D183A183300F38138 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FB7C183A183300F38138 /* main.m */; };
+		0F01FB81183A183300F38138 /* JSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FB80183A183300F38138 /* JSAppDelegate.m */; };
+		0F01FB84183A183300F38138 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FB82183A183300F38138 /* Main.storyboard */; };
+		0F01FB89183A183300F38138 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FB88183A183300F38138 /* Images.xcassets */; };
+		0F01FB90183A183400F38138 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F01FB8F183A183400F38138 /* XCTest.framework */; };
+		0F01FB91183A183400F38138 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F01FB70183A183300F38138 /* Foundation.framework */; };
+		0F01FB92183A183400F38138 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F01FB74183A183300F38138 /* UIKit.framework */; };
+		0F01FB9A183A183400F38138 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FB98183A183400F38138 /* InfoPlist.strings */; };
+		0F01FB9C183A183400F38138 /* JS__ipadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FB9B183A183400F38138 /* JS__ipadTests.m */; };
+		0F01FBA8183A1CD000F38138 /* JSLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FBA7183A1CD000F38138 /* JSLoginModel.m */; };
+		0F01FBAB183A1D0700F38138 /* JSRegistModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FBAA183A1D0700F38138 /* JSRegistModel.m */; };
+		0F01FBAE183A1ED500F38138 /* JSLogoutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FBAD183A1ED500F38138 /* JSLogoutModel.m */; };
+		0F01FBB3183A1FEE00F38138 /* JSBPCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FBB2183A1FEE00F38138 /* JSBPCell.m */; };
+		0F01FBB6183A205500F38138 /* JSBPCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F01FBB5183A205500F38138 /* JSBPCell.xib */; };
+		0F01FBC3183A36EE00F38138 /* JSStartPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FBC2183A36EE00F38138 /* JSStartPageViewController.m */; };
+		0F01FBE6183B184800F38138 /* PNBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FBDB183B184800F38138 /* PNBar.m */; };
+		0F01FBE7183B184800F38138 /* PNBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FBDD183B184800F38138 /* PNBarChart.m */; };
+		0F01FBE8183B184800F38138 /* PNChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FBDF183B184800F38138 /* PNChart.m */; };
+		0F01FBE9183B184800F38138 /* PNChartLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FBE1183B184800F38138 /* PNChartLabel.m */; };
+		0F01FBEA183B184800F38138 /* PNColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FBE3183B184800F38138 /* PNColor.m */; };
+		0F01FBEB183B184800F38138 /* PNLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01FBE5183B184800F38138 /* PNLineChart.m */; };
+		0F20B44A183C48A3000E3D2A /* menubg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F20B448183C48A3000E3D2A /* menubg.png */; };
+		0F20B44B183C48A3000E3D2A /* viewbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F20B449183C48A3000E3D2A /* viewbg.png */; };
+		0F20B44F183C60B7000E3D2A /* JSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F20B44D183C60B7000E3D2A /* JSMainViewController.m */; };
+		0F20B450183C60B7000E3D2A /* JSMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F20B44E183C60B7000E3D2A /* JSMainViewController.xib */; };
+		0F20B453183C67D2000E3D2A /* JSLocalDataSave.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F20B452183C67D2000E3D2A /* JSLocalDataSave.m */; };
+		0F20B456183C7DBC000E3D2A /* JSRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F20B455183C7DBC000E3D2A /* JSRegisterView.m */; };
+		0F20B45B183CD7CD000E3D2A /* JSFamilyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F20B45A183CD7CD000E3D2A /* JSFamilyView.m */; };
+		0FA48A39183DA11B004E3A5F /* JSNaviMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA48A38183DA11B004E3A5F /* JSNaviMenuController.m */; };
+		0FA48A3D183DA3C3004E3A5F /* JSFamilyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA48A3B183DA3C3004E3A5F /* JSFamilyViewController.m */; };
+		0FA48A3E183DA3C3004E3A5F /* JSFamilyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A3C183DA3C3004E3A5F /* JSFamilyViewController.xib */; };
+		0FA48A41183DB1EB004E3A5F /* JSFamilyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA48A40183DB1EB004E3A5F /* JSFamilyCell.m */; };
+		0FA48A50183DB373004E3A5F /* colorbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A43183DB373004E3A5F /* colorbar@2x.png */; };
+		0FA48A51183DB373004E3A5F /* headImage0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A44183DB373004E3A5F /* headImage0@2x.png */; };
+		0FA48A52183DB373004E3A5F /* headImage1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A45183DB373004E3A5F /* headImage1@2x.png */; };
+		0FA48A53183DB373004E3A5F /* headImage2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A46183DB373004E3A5F /* headImage2@2x.png */; };
+		0FA48A54183DB373004E3A5F /* headImage3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A47183DB373004E3A5F /* headImage3@2x.png */; };
+		0FA48A55183DB373004E3A5F /* headImage4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A48183DB373004E3A5F /* headImage4@2x.png */; };
+		0FA48A56183DB373004E3A5F /* headImage5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A49183DB373004E3A5F /* headImage5@2x.png */; };
+		0FA48A57183DB373004E3A5F /* headImage6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A4A183DB373004E3A5F /* headImage6@2x.png */; };
+		0FA48A58183DB373004E3A5F /* line_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A4B183DB373004E3A5F /* line_bg@2x.png */; };
+		0FA48A59183DB373004E3A5F /* nodata@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A4C183DB373004E3A5F /* nodata@2x.png */; };
+		0FA48A5A183DB373004E3A5F /* storefront_icon_data_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A4D183DB373004E3A5F /* storefront_icon_data_on@2x.png */; };
+		0FA48A5B183DB373004E3A5F /* 菜单@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A4E183DB373004E3A5F /* 菜单@2x.png */; };
+		0FA48A5C183DB373004E3A5F /* 返回@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A4F183DB373004E3A5F /* 返回@2x.png */; };
+		0FA48A62183DD1C4004E3A5F /* JSAddFamilyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA48A61183DD1C4004E3A5F /* JSAddFamilyViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F01FB93183A183400F38138 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F01FB65183A183300F38138 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F01FB6C183A183300F38138;
+			remoteInfo = "JS血压ipad";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F01FB6D183A183300F38138 /* JS血压ipad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JS血压ipad.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F01FB70183A183300F38138 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0F01FB72183A183300F38138 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0F01FB74183A183300F38138 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0F01FB78183A183300F38138 /* JS血压ipad-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JS血压ipad-Info.plist"; sourceTree = "<group>"; };
+		0F01FB7A183A183300F38138 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0F01FB7C183A183300F38138 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0F01FB7E183A183300F38138 /* JS血压ipad-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JS血压ipad-Prefix.pch"; sourceTree = "<group>"; };
+		0F01FB7F183A183300F38138 /* JSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSAppDelegate.h; sourceTree = "<group>"; };
+		0F01FB80183A183300F38138 /* JSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSAppDelegate.m; sourceTree = "<group>"; };
+		0F01FB83183A183300F38138 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0F01FB88183A183300F38138 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0F01FB8E183A183400F38138 /* JS血压ipadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JS血压ipadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F01FB8F183A183400F38138 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0F01FB97183A183400F38138 /* JS血压ipadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JS血压ipadTests-Info.plist"; sourceTree = "<group>"; };
+		0F01FB99183A183400F38138 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0F01FB9B183A183400F38138 /* JS__ipadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JS__ipadTests.m; sourceTree = "<group>"; };
+		0F01FBA6183A1CD000F38138 /* JSLoginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLoginModel.h; sourceTree = "<group>"; };
+		0F01FBA7183A1CD000F38138 /* JSLoginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLoginModel.m; sourceTree = "<group>"; };
+		0F01FBA9183A1D0700F38138 /* JSRegistModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRegistModel.h; sourceTree = "<group>"; };
+		0F01FBAA183A1D0700F38138 /* JSRegistModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRegistModel.m; sourceTree = "<group>"; };
+		0F01FBAC183A1ED500F38138 /* JSLogoutModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLogoutModel.h; sourceTree = "<group>"; };
+		0F01FBAD183A1ED500F38138 /* JSLogoutModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLogoutModel.m; sourceTree = "<group>"; };
+		0F01FBB1183A1FEE00F38138 /* JSBPCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBPCell.h; sourceTree = "<group>"; };
+		0F01FBB2183A1FEE00F38138 /* JSBPCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSBPCell.m; sourceTree = "<group>"; };
+		0F01FBB5183A205500F38138 /* JSBPCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSBPCell.xib; sourceTree = "<group>"; };
+		0F01FBC1183A36EE00F38138 /* JSStartPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSStartPageViewController.h; sourceTree = "<group>"; };
+		0F01FBC2183A36EE00F38138 /* JSStartPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSStartPageViewController.m; sourceTree = "<group>"; };
+		0F01FBDA183B184800F38138 /* PNBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNBar.h; sourceTree = "<group>"; };
+		0F01FBDB183B184800F38138 /* PNBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNBar.m; sourceTree = "<group>"; };
+		0F01FBDC183B184800F38138 /* PNBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNBarChart.h; sourceTree = "<group>"; };
+		0F01FBDD183B184800F38138 /* PNBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNBarChart.m; sourceTree = "<group>"; };
+		0F01FBDE183B184800F38138 /* PNChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChart.h; sourceTree = "<group>"; };
+		0F01FBDF183B184800F38138 /* PNChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNChart.m; sourceTree = "<group>"; };
+		0F01FBE0183B184800F38138 /* PNChartLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNChartLabel.h; sourceTree = "<group>"; };
+		0F01FBE1183B184800F38138 /* PNChartLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNChartLabel.m; sourceTree = "<group>"; };
+		0F01FBE2183B184800F38138 /* PNColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNColor.h; sourceTree = "<group>"; };
+		0F01FBE3183B184800F38138 /* PNColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNColor.m; sourceTree = "<group>"; };
+		0F01FBE4183B184800F38138 /* PNLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNLineChart.h; sourceTree = "<group>"; };
+		0F01FBE5183B184800F38138 /* PNLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNLineChart.m; sourceTree = "<group>"; };
+		0F20B448183C48A3000E3D2A /* menubg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menubg.png; sourceTree = "<group>"; };
+		0F20B449183C48A3000E3D2A /* viewbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viewbg.png; sourceTree = "<group>"; };
+		0F20B44C183C60B7000E3D2A /* JSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMainViewController.h; sourceTree = "<group>"; };
+		0F20B44D183C60B7000E3D2A /* JSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMainViewController.m; sourceTree = "<group>"; };
+		0F20B44E183C60B7000E3D2A /* JSMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSMainViewController.xib; sourceTree = "<group>"; };
+		0F20B451183C67D2000E3D2A /* JSLocalDataSave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLocalDataSave.h; sourceTree = "<group>"; };
+		0F20B452183C67D2000E3D2A /* JSLocalDataSave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLocalDataSave.m; sourceTree = "<group>"; };
+		0F20B454183C7DBC000E3D2A /* JSRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRegisterView.h; sourceTree = "<group>"; };
+		0F20B455183C7DBC000E3D2A /* JSRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRegisterView.m; sourceTree = "<group>"; };
+		0F20B459183CD7CD000E3D2A /* JSFamilyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFamilyView.h; sourceTree = "<group>"; };
+		0F20B45A183CD7CD000E3D2A /* JSFamilyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFamilyView.m; sourceTree = "<group>"; };
+		0FA48A37183DA11B004E3A5F /* JSNaviMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNaviMenuController.h; sourceTree = "<group>"; };
+		0FA48A38183DA11B004E3A5F /* JSNaviMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNaviMenuController.m; sourceTree = "<group>"; };
+		0FA48A3A183DA3C3004E3A5F /* JSFamilyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFamilyViewController.h; sourceTree = "<group>"; };
+		0FA48A3B183DA3C3004E3A5F /* JSFamilyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFamilyViewController.m; sourceTree = "<group>"; };
+		0FA48A3C183DA3C3004E3A5F /* JSFamilyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSFamilyViewController.xib; sourceTree = "<group>"; };
+		0FA48A3F183DB1EB004E3A5F /* JSFamilyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFamilyCell.h; sourceTree = "<group>"; };
+		0FA48A40183DB1EB004E3A5F /* JSFamilyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSFamilyCell.m; sourceTree = "<group>"; };
+		0FA48A43183DB373004E3A5F /* colorbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "colorbar@2x.png"; sourceTree = "<group>"; };
+		0FA48A44183DB373004E3A5F /* headImage0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage0@2x.png"; sourceTree = "<group>"; };
+		0FA48A45183DB373004E3A5F /* headImage1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage1@2x.png"; sourceTree = "<group>"; };
+		0FA48A46183DB373004E3A5F /* headImage2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage2@2x.png"; sourceTree = "<group>"; };
+		0FA48A47183DB373004E3A5F /* headImage3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage3@2x.png"; sourceTree = "<group>"; };
+		0FA48A48183DB373004E3A5F /* headImage4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage4@2x.png"; sourceTree = "<group>"; };
+		0FA48A49183DB373004E3A5F /* headImage5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage5@2x.png"; sourceTree = "<group>"; };
+		0FA48A4A183DB373004E3A5F /* headImage6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "headImage6@2x.png"; sourceTree = "<group>"; };
+		0FA48A4B183DB373004E3A5F /* line_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_bg@2x.png"; sourceTree = "<group>"; };
+		0FA48A4C183DB373004E3A5F /* nodata@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nodata@2x.png"; sourceTree = "<group>"; };
+		0FA48A4D183DB373004E3A5F /* storefront_icon_data_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "storefront_icon_data_on@2x.png"; sourceTree = "<group>"; };
+		0FA48A4E183DB373004E3A5F /* 菜单@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "菜单@2x.png"; sourceTree = "<group>"; };
+		0FA48A4F183DB373004E3A5F /* 返回@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回@2x.png"; sourceTree = "<group>"; };
+		0FA48A60183DD1C4004E3A5F /* JSAddFamilyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAddFamilyViewController.h; sourceTree = "<group>"; };
+		0FA48A61183DD1C4004E3A5F /* JSAddFamilyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAddFamilyViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F01FB6A183A183300F38138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F01FB73183A183300F38138 /* CoreGraphics.framework in Frameworks */,
+				0F01FB75183A183300F38138 /* UIKit.framework in Frameworks */,
+				0F01FB71183A183300F38138 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F01FB8B183A183400F38138 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F01FB90183A183400F38138 /* XCTest.framework in Frameworks */,
+				0F01FB92183A183400F38138 /* UIKit.framework in Frameworks */,
+				0F01FB91183A183400F38138 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F01FB64183A183300F38138 = {
+			isa = PBXGroup;
+			children = (
+				0F01FB76183A183300F38138 /* JS血压ipad */,
+				0F01FB95183A183400F38138 /* JS血压ipadTests */,
+				0F01FB6F183A183300F38138 /* Frameworks */,
+				0F01FB6E183A183300F38138 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0F01FB6E183A183300F38138 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F01FB6D183A183300F38138 /* JS血压ipad.app */,
+				0F01FB8E183A183400F38138 /* JS血压ipadTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F01FB6F183A183300F38138 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F01FB70183A183300F38138 /* Foundation.framework */,
+				0F01FB72183A183300F38138 /* CoreGraphics.framework */,
+				0F01FB74183A183300F38138 /* UIKit.framework */,
+				0F01FB8F183A183400F38138 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0F01FB76183A183300F38138 /* JS血压ipad */ = {
+			isa = PBXGroup;
+			children = (
+				0FA48A1F183CE656004E3A5F /* TabController */,
+				0F20B447183C488A000E3D2A /* image */,
+				0F01FBC5183AF84B00F38138 /* JSController */,
+				0F01FBC4183AF83800F38138 /* JSview */,
+				0F01FBB7183A232500F38138 /* others */,
+				0F01FBA5183A1C4600F38138 /* JSModel */,
+				0F01FB7F183A183300F38138 /* JSAppDelegate.h */,
+				0F01FB80183A183300F38138 /* JSAppDelegate.m */,
+				0F01FB82183A183300F38138 /* Main.storyboard */,
+				0F01FB88183A183300F38138 /* Images.xcassets */,
+				0F01FB77183A183300F38138 /* Supporting Files */,
+			);
+			path = "JS血压ipad";
+			sourceTree = "<group>";
+		};
+		0F01FB77183A183300F38138 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F01FB78183A183300F38138 /* JS血压ipad-Info.plist */,
+				0F01FB79183A183300F38138 /* InfoPlist.strings */,
+				0F01FB7C183A183300F38138 /* main.m */,
+				0F01FB7E183A183300F38138 /* JS血压ipad-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F01FB95183A183400F38138 /* JS血压ipadTests */ = {
+			isa = PBXGroup;
+			children = (
+				0F01FB9B183A183400F38138 /* JS__ipadTests.m */,
+				0F01FB96183A183400F38138 /* Supporting Files */,
+			);
+			path = "JS血压ipadTests";
+			sourceTree = "<group>";
+		};
+		0F01FB96183A183400F38138 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F01FB97183A183400F38138 /* JS血压ipadTests-Info.plist */,
+				0F01FB98183A183400F38138 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F01FBA5183A1C4600F38138 /* JSModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F01FBA6183A1CD000F38138 /* JSLoginModel.h */,
+				0F01FBA7183A1CD000F38138 /* JSLoginModel.m */,
+				0F01FBA9183A1D0700F38138 /* JSRegistModel.h */,
+				0F01FBAA183A1D0700F38138 /* JSRegistModel.m */,
+				0F01FBAC183A1ED500F38138 /* JSLogoutModel.h */,
+				0F01FBAD183A1ED500F38138 /* JSLogoutModel.m */,
+				0F20B451183C67D2000E3D2A /* JSLocalDataSave.h */,
+				0F20B452183C67D2000E3D2A /* JSLocalDataSave.m */,
+			);
+			name = JSModel;
+			sourceTree = "<group>";
+		};
+		0F01FBB0183A1FA000F38138 /* JSCell */ = {
+			isa = PBXGroup;
+			children = (
+				0F01FBB1183A1FEE00F38138 /* JSBPCell.h */,
+				0F01FBB2183A1FEE00F38138 /* JSBPCell.m */,
+				0F01FBB5183A205500F38138 /* JSBPCell.xib */,
+				0FA48A3F183DB1EB004E3A5F /* JSFamilyCell.h */,
+				0FA48A40183DB1EB004E3A5F /* JSFamilyCell.m */,
+			);
+			name = JSCell;
+			sourceTree = "<group>";
+		};
+		0F01FBB7183A232500F38138 /* others */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = others;
+			sourceTree = "<group>";
+		};
+		0F01FBC4183AF83800F38138 /* JSview */ = {
+			isa = PBXGroup;
+			children = (
+				0F01FBD9183B184800F38138 /* PNChart */,
+				0F01FBB0183A1FA000F38138 /* JSCell */,
+				0F20B454183C7DBC000E3D2A /* JSRegisterView.h */,
+				0F20B455183C7DBC000E3D2A /* JSRegisterView.m */,
+				0F20B459183CD7CD000E3D2A /* JSFamilyView.h */,
+				0F20B45A183CD7CD000E3D2A /* JSFamilyView.m */,
+			);
+			name = JSview;
+			sourceTree = "<group>";
+		};
+		0F01FBC5183AF84B00F38138 /* JSController */ = {
+			isa = PBXGroup;
+			children = (
+				0F20B44C183C60B7000E3D2A /* JSMainViewController.h */,
+				0F20B44D183C60B7000E3D2A /* JSMainViewController.m */,
+				0F20B44E183C60B7000E3D2A /* JSMainViewController.xib */,
+				0F01FBC1183A36EE00F38138 /* JSStartPageViewController.h */,
+				0F01FBC2183A36EE00F38138 /* JSStartPageViewController.m */,
+				0FA48A3A183DA3C3004E3A5F /* JSFamilyViewController.h */,
+				0FA48A3B183DA3C3004E3A5F /* JSFamilyViewController.m */,
+				0FA48A3C183DA3C3004E3A5F /* JSFamilyViewController.xib */,
+				0FA48A60183DD1C4004E3A5F /* JSAddFamilyViewController.h */,
+				0FA48A61183DD1C4004E3A5F /* JSAddFamilyViewController.m */,
+			);
+			name = JSController;
+			sourceTree = "<group>";
+		};
+		0F01FBD9183B184800F38138 /* PNChart */ = {
+			isa = PBXGroup;
+			children = (
+				0F01FBDA183B184800F38138 /* PNBar.h */,
+				0F01FBDB183B184800F38138 /* PNBar.m */,
+				0F01FBDC183B184800F38138 /* PNBarChart.h */,
+				0F01FBDD183B184800F38138 /* PNBarChart.m */,
+				0F01FBDE183B184800F38138 /* PNChart.h */,
+				0F01FBDF183B184800F38138 /* PNChart.m */,
+				0F01FBE0183B184800F38138 /* PNChartLabel.h */,
+				0F01FBE1183B184800F38138 /* PNChartLabel.m */,
+				0F01FBE2183B184800F38138 /* PNColor.h */,
+				0F01FBE3183B184800F38138 /* PNColor.m */,
+				0F01FBE4183B184800F38138 /* PNLineChart.h */,
+				0F01FBE5183B184800F38138 /* PNLineChart.m */,
+			);
+			path = PNChart;
+			sourceTree = "<group>";
+		};
+		0F20B447183C488A000E3D2A /* image */ = {
+			isa = PBXGroup;
+			children = (
+				0FA48A42183DB373004E3A5F /* 120 */,
+				0F20B448183C48A3000E3D2A /* menubg.png */,
+				0F20B449183C48A3000E3D2A /* viewbg.png */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+		0FA48A1F183CE656004E3A5F /* TabController */ = {
+			isa = PBXGroup;
+			children = (
+				0FA48A37183DA11B004E3A5F /* JSNaviMenuController.h */,
+				0FA48A38183DA11B004E3A5F /* JSNaviMenuController.m */,
+			);
+			name = TabController;
+			sourceTree = "<group>";
+		};
+		0FA48A42183DB373004E3A5F /* 120 */ = {
+			isa = PBXGroup;
+			children = (
+				0FA48A43183DB373004E3A5F /* colorbar@2x.png */,
+				0FA48A44183DB373004E3A5F /* headImage0@2x.png */,
+				0FA48A45183DB373004E3A5F /* headImage1@2x.png */,
+				0FA48A46183DB373004E3A5F /* headImage2@2x.png */,
+				0FA48A47183DB373004E3A5F /* headImage3@2x.png */,
+				0FA48A48183DB373004E3A5F /* headImage4@2x.png */,
+				0FA48A49183DB373004E3A5F /* headImage5@2x.png */,
+				0FA48A4A183DB373004E3A5F /* headImage6@2x.png */,
+				0FA48A4B183DB373004E3A5F /* line_bg@2x.png */,
+				0FA48A4C183DB373004E3A5F /* nodata@2x.png */,
+				0FA48A4D183DB373004E3A5F /* storefront_icon_data_on@2x.png */,
+				0FA48A4E183DB373004E3A5F /* 菜单@2x.png */,
+				0FA48A4F183DB373004E3A5F /* 返回@2x.png */,
+			);
+			path = 120;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F01FB6C183A183300F38138 /* JS血压ipad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F01FB9F183A183400F38138 /* Build configuration list for PBXNativeTarget "JS血压ipad" */;
+			buildPhases = (
+				0F01FB69183A183300F38138 /* Sources */,
+				0F01FB6A183A183300F38138 /* Frameworks */,
+				0F01FB6B183A183300F38138 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JS血压ipad";
+			productName = "JS血压ipad";
+			productReference = 0F01FB6D183A183300F38138 /* JS血压ipad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0F01FB8D183A183400F38138 /* JS血压ipadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F01FBA2183A183400F38138 /* Build configuration list for PBXNativeTarget "JS血压ipadTests" */;
+			buildPhases = (
+				0F01FB8A183A183400F38138 /* Sources */,
+				0F01FB8B183A183400F38138 /* Frameworks */,
+				0F01FB8C183A183400F38138 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F01FB94183A183400F38138 /* PBXTargetDependency */,
+			);
+			name = "JS血压ipadTests";
+			productName = "JS血压ipadTests";
+			productReference = 0F01FB8E183A183400F38138 /* JS血压ipadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F01FB65183A183300F38138 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JS;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "han's mac";
+				TargetAttributes = {
+					0F01FB8D183A183400F38138 = {
+						TestTargetID = 0F01FB6C183A183300F38138;
+					};
+				};
+			};
+			buildConfigurationList = 0F01FB68183A183300F38138 /* Build configuration list for PBXProject "JS血压ipad" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0F01FB64183A183300F38138;
+			productRefGroup = 0F01FB6E183A183300F38138 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F01FB6C183A183300F38138 /* JS血压ipad */,
+				0F01FB8D183A183400F38138 /* JS血压ipadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F01FB6B183A183300F38138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F20B44A183C48A3000E3D2A /* menubg.png in Resources */,
+				0FA48A55183DB373004E3A5F /* headImage4@2x.png in Resources */,
+				0FA48A51183DB373004E3A5F /* headImage0@2x.png in Resources */,
+				0FA48A3E183DA3C3004E3A5F /* JSFamilyViewController.xib in Resources */,
+				0F01FBB6183A205500F38138 /* JSBPCell.xib in Resources */,
+				0FA48A56183DB373004E3A5F /* headImage5@2x.png in Resources */,
+				0FA48A5C183DB373004E3A5F /* 返回@2x.png in Resources */,
+				0F20B450183C60B7000E3D2A /* JSMainViewController.xib in Resources */,
+				0FA48A53183DB373004E3A5F /* headImage2@2x.png in Resources */,
+				0FA48A52183DB373004E3A5F /* headImage1@2x.png in Resources */,
+				0FA48A57183DB373004E3A5F /* headImage6@2x.png in Resources */,
+				0FA48A58183DB373004E3A5F /* line_bg@2x.png in Resources */,
+				0FA48A59183DB373004E3A5F /* nodata@2x.png in Resources */,
+				0FA48A54183DB373004E3A5F /* headImage3@2x.png in Resources */,
+				0FA48A5A183DB373004E3A5F /* storefront_icon_data_on@2x.png in Resources */,
+				0F01FB89183A183300F38138 /* Images.xcassets in Resources */,
+				0F20B44B183C48A3000E3D2A /* viewbg.png in Resources */,
+				0F01FB7B183A183300F38138 /* InfoPlist.strings in Resources */,
+				0FA48A50183DB373004E3A5F /* colorbar@2x.png in Resources */,
+				0F01FB84183A183300F38138 /* Main.storyboard in Resources */,
+				0FA48A5B183DB373004E3A5F /* 菜单@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F01FB8C183A183400F38138 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F01FB9A183A183400F38138 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F01FB69183A183300F38138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FA48A41183DB1EB004E3A5F /* JSFamilyCell.m in Sources */,
+				0FA48A62183DD1C4004E3A5F /* JSAddFamilyViewController.m in Sources */,
+				0F01FBAE183A1ED500F38138 /* JSLogoutModel.m in Sources */,
+				0F01FBA8183A1CD000F38138 /* JSLoginModel.m in Sources */,
+				0FA48A3D183DA3C3004E3A5F /* JSFamilyViewController.m in Sources */,
+				0F20B44F183C60B7000E3D2A /* JSMainViewController.m in Sources */,
+				0F01FBB3183A1FEE00F38138 /* JSBPCell.m in Sources */,
+				0FA48A39183DA11B004E3A5F /* JSNaviMenuController.m in Sources */,
+				0F01FB7D183A183300F38138 /* main.m in Sources */,
+				0F01FBE8183B184800F38138 /* PNChart.m in Sources */,
+				0F01FBEB183B184800F38138 /* PNLineChart.m in Sources */,
+				0F01FBE6183B184800F38138 /* PNBar.m in Sources */,
+				0F01FBEA183B184800F38138 /* PNColor.m in Sources */,
+				0F01FBAB183A1D0700F38138 /* JSRegistModel.m in Sources */,
+				0F01FBE7183B184800F38138 /* PNBarChart.m in Sources */,
+				0F01FBE9183B184800F38138 /* PNChartLabel.m in Sources */,
+				0F20B456183C7DBC000E3D2A /* JSRegisterView.m in Sources */,
+				0F20B453183C67D2000E3D2A /* JSLocalDataSave.m in Sources */,
+				0F01FB81183A183300F38138 /* JSAppDelegate.m in Sources */,
+				0F01FBC3183A36EE00F38138 /* JSStartPageViewController.m in Sources */,
+				0F20B45B183CD7CD000E3D2A /* JSFamilyView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F01FB8A183A183400F38138 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F01FB9C183A183400F38138 /* JS__ipadTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F01FB94183A183400F38138 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F01FB6C183A183300F38138 /* JS血压ipad */;
+			targetProxy = 0F01FB93183A183400F38138 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0F01FB79183A183300F38138 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F01FB7A183A183300F38138 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0F01FB82183A183300F38138 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F01FB83183A183300F38138 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0F01FB98183A183400F38138 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F01FB99183A183400F38138 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F01FB9D183A183400F38138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		0F01FB9E183A183400F38138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0F01FBA0183A183400F38138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JS血压ipad/JS血压ipad-Prefix.pch";
+				INFOPLIST_FILE = "JS血压ipad/JS血压ipad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0F01FBA1183A183400F38138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JS血压ipad/JS血压ipad-Prefix.pch";
+				INFOPLIST_FILE = "JS血压ipad/JS血压ipad-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0F01FBA3183A183400F38138 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JS血压ipad.app/JS血压ipad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JS血压ipad/JS血压ipad-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "JS血压ipadTests/JS血压ipadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0F01FBA4183A183400F38138 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/JS血压ipad.app/JS血压ipad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JS血压ipad/JS血压ipad-Prefix.pch";
+				INFOPLIST_FILE = "JS血压ipadTests/JS血压ipadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F01FB68183A183300F38138 /* Build configuration list for PBXProject "JS血压ipad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F01FB9D183A183400F38138 /* Debug */,
+				0F01FB9E183A183400F38138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F01FB9F183A183400F38138 /* Build configuration list for PBXNativeTarget "JS血压ipad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F01FBA0183A183400F38138 /* Debug */,
+				0F01FBA1183A183400F38138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F01FBA2183A183400F38138 /* Build configuration list for PBXNativeTarget "JS血压ipadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F01FBA3183A183400F38138 /* Debug */,
+				0F01FBA4183A183400F38138 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F01FB65183A183300F38138 /* Project object */;
+}
