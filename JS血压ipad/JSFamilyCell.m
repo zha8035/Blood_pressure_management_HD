@@ -15,6 +15,7 @@
     UILabel *infoLab;
     
 }
+@synthesize memberInfoDict;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -54,7 +55,20 @@
             }
     return self;
 }
-
+- (void)makeCell
+{
+    NSString *name = [memberInfoDict objectForKey:@"name"];
+   // NSString *age = [memberInfoDict objectForKey:@"age"];
+    NSString *gender = [memberInfoDict objectForKey:@"gender"];
+    NSString *height = [memberInfoDict objectForKey:@"height"];
+    NSString *weight = [memberInfoDict objectForKey:@"weight"];
+    NSString *headImageStr = [memberInfoDict objectForKey:@"image"];
+    
+    nameLab.text = name;
+    headImageView.image = [UIImage imageNamed:headImageStr];
+    
+    infoLab.text = [NSString stringWithFormat:@"性别: %@       身高:%@\n\n体重:%@",gender,height,weight];
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];

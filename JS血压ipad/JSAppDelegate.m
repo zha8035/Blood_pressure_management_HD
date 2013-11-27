@@ -7,12 +7,12 @@
 //
 
 #import "JSAppDelegate.h"
-
+#import "JSStartPageViewController.h"
 @implementation JSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+        // Override point for customization after application launch.
     return YES;
 }
 							

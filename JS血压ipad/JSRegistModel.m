@@ -9,5 +9,11 @@
 #import "JSRegistModel.h"
 
 @implementation JSRegistModel
+@synthesize usernameStr,passwordStr,emailStr;
+
+-(BOOL)asiHttpRequestRegist
+{
+    return YES;
+}
 
 @end

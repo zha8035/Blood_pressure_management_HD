@@ -6,9 +6,15 @@
 //  Copyright (c) 2013 han's mac. All rights reserved.
 //
 
+
+
 #import <UIKit/UIKit.h>
 #import "JSAddFamilyViewController.h"
-@interface JSFamilyViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface JSFamilyViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,reNewData>
+{
+    NSDictionary *familyMembers;
+}
+@property (nonatomic) NSDictionary *familyMembers;
 
 
 @end

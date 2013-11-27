@@ -12,18 +12,21 @@
 #import "JSRegisterView.h"
 #import "PNColor.h"
 #import "JSRegisterView.h"
+#import "JSRegistModel.h"
+#import "JSFamilyViewController.h"
 
 #import "JSNaviMenuController.h"
-@interface JSStartPageViewController : UIViewController//<UIScrollViewAccessibilityDelegate,UIScrollViewDelegate>
+@interface JSStartPageViewController : UIViewController<UITextFieldDelegate>
 
 //@property (strong,nonatomic) UIScrollView *scrollView;
 //@property (strong,nonatomic) UIPageControl *pageControl;
-@property (weak, nonatomic) IBOutlet UIView *LoginRegisterView;
+@property ( nonatomic) IBOutlet UIView *LoginRegisterView;
 
-@property (weak, nonatomic) IBOutlet UITextField *UsernameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *PasswordTextField;
+@property ( nonatomic) IBOutlet UITextField *UsernameTextField;
+@property ( nonatomic) IBOutlet UITextField *PasswordTextField;
 
-- (IBAction)editingDidBegin:(UITextField *)sender;
-- (IBAction)editingDidEnd:(UITextField *)sender;
-- (IBAction)keyboardHideButtonTouched;
+
+
+
+
 @end

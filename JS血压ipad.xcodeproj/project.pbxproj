@@ -36,7 +36,6 @@
 		0F20B44B183C48A3000E3D2A /* viewbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F20B449183C48A3000E3D2A /* viewbg.png */; };
 		0F20B44F183C60B7000E3D2A /* JSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F20B44D183C60B7000E3D2A /* JSMainViewController.m */; };
 		0F20B450183C60B7000E3D2A /* JSMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F20B44E183C60B7000E3D2A /* JSMainViewController.xib */; };
-		0F20B453183C67D2000E3D2A /* JSLocalDataSave.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F20B452183C67D2000E3D2A /* JSLocalDataSave.m */; };
 		0F20B456183C7DBC000E3D2A /* JSRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F20B455183C7DBC000E3D2A /* JSRegisterView.m */; };
 		0F20B45B183CD7CD000E3D2A /* JSFamilyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F20B45A183CD7CD000E3D2A /* JSFamilyView.m */; };
 		0FA48A39183DA11B004E3A5F /* JSNaviMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA48A38183DA11B004E3A5F /* JSNaviMenuController.m */; };
@@ -57,6 +56,10 @@
 		0FA48A5B183DB373004E3A5F /* 菜单@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A4E183DB373004E3A5F /* 菜单@2x.png */; };
 		0FA48A5C183DB373004E3A5F /* 返回@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FA48A4F183DB373004E3A5F /* 返回@2x.png */; };
 		0FA48A62183DD1C4004E3A5F /* JSAddFamilyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA48A61183DD1C4004E3A5F /* JSAddFamilyViewController.m */; };
+		0FA78E7A183F0B810080BC02 /* JSAddDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA78E79183F0B810080BC02 /* JSAddDataViewController.m */; };
+		0FA78E7E1840B6000080BC02 /* JSlocalSaveAndRead.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA78E7D1840B6000080BC02 /* JSlocalSaveAndRead.m */; };
+		0FA78E801843368D0080BC02 /* Empty.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FA78E7F1843368D0080BC02 /* Empty.xib */; };
+		0FA78E83184337BE0080BC02 /* JSPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA78E82184337BE0080BC02 /* JSPointViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,8 +118,6 @@
 		0F20B44C183C60B7000E3D2A /* JSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSMainViewController.h; sourceTree = "<group>"; };
 		0F20B44D183C60B7000E3D2A /* JSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSMainViewController.m; sourceTree = "<group>"; };
 		0F20B44E183C60B7000E3D2A /* JSMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSMainViewController.xib; sourceTree = "<group>"; };
-		0F20B451183C67D2000E3D2A /* JSLocalDataSave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLocalDataSave.h; sourceTree = "<group>"; };
-		0F20B452183C67D2000E3D2A /* JSLocalDataSave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLocalDataSave.m; sourceTree = "<group>"; };
 		0F20B454183C7DBC000E3D2A /* JSRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRegisterView.h; sourceTree = "<group>"; };
 		0F20B455183C7DBC000E3D2A /* JSRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRegisterView.m; sourceTree = "<group>"; };
 		0F20B459183CD7CD000E3D2A /* JSFamilyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSFamilyView.h; sourceTree = "<group>"; };
@@ -143,6 +144,13 @@
 		0FA48A4F183DB373004E3A5F /* 返回@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "返回@2x.png"; sourceTree = "<group>"; };
 		0FA48A60183DD1C4004E3A5F /* JSAddFamilyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAddFamilyViewController.h; sourceTree = "<group>"; };
 		0FA48A61183DD1C4004E3A5F /* JSAddFamilyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAddFamilyViewController.m; sourceTree = "<group>"; };
+		0FA78E78183F0B810080BC02 /* JSAddDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSAddDataViewController.h; sourceTree = "<group>"; };
+		0FA78E79183F0B810080BC02 /* JSAddDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSAddDataViewController.m; sourceTree = "<group>"; };
+		0FA78E7C1840B6000080BC02 /* JSlocalSaveAndRead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSlocalSaveAndRead.h; sourceTree = "<group>"; };
+		0FA78E7D1840B6000080BC02 /* JSlocalSaveAndRead.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSlocalSaveAndRead.m; sourceTree = "<group>"; };
+		0FA78E7F1843368D0080BC02 /* Empty.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Empty.xib; sourceTree = "<group>"; };
+		0FA78E81184337BE0080BC02 /* JSPointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSPointViewController.h; sourceTree = "<group>"; };
+		0FA78E82184337BE0080BC02 /* JSPointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSPointViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,8 +263,8 @@
 				0F01FBAA183A1D0700F38138 /* JSRegistModel.m */,
 				0F01FBAC183A1ED500F38138 /* JSLogoutModel.h */,
 				0F01FBAD183A1ED500F38138 /* JSLogoutModel.m */,
-				0F20B451183C67D2000E3D2A /* JSLocalDataSave.h */,
-				0F20B452183C67D2000E3D2A /* JSLocalDataSave.m */,
+				0FA78E7C1840B6000080BC02 /* JSlocalSaveAndRead.h */,
+				0FA78E7D1840B6000080BC02 /* JSlocalSaveAndRead.m */,
 			);
 			name = JSModel;
 			sourceTree = "<group>";
@@ -276,6 +284,9 @@
 		0F01FBB7183A232500F38138 /* others */ = {
 			isa = PBXGroup;
 			children = (
+				0FA78E7F1843368D0080BC02 /* Empty.xib */,
+				0FA78E81184337BE0080BC02 /* JSPointViewController.h */,
+				0FA78E82184337BE0080BC02 /* JSPointViewController.m */,
 			);
 			name = others;
 			sourceTree = "<group>";
@@ -296,6 +307,7 @@
 		0F01FBC5183AF84B00F38138 /* JSController */ = {
 			isa = PBXGroup;
 			children = (
+				0FA78E7B183F0B870080BC02 /* JSChildController */,
 				0F20B44C183C60B7000E3D2A /* JSMainViewController.h */,
 				0F20B44D183C60B7000E3D2A /* JSMainViewController.m */,
 				0F20B44E183C60B7000E3D2A /* JSMainViewController.xib */,
@@ -304,8 +316,6 @@
 				0FA48A3A183DA3C3004E3A5F /* JSFamilyViewController.h */,
 				0FA48A3B183DA3C3004E3A5F /* JSFamilyViewController.m */,
 				0FA48A3C183DA3C3004E3A5F /* JSFamilyViewController.xib */,
-				0FA48A60183DD1C4004E3A5F /* JSAddFamilyViewController.h */,
-				0FA48A61183DD1C4004E3A5F /* JSAddFamilyViewController.m */,
 			);
 			name = JSController;
 			sourceTree = "<group>";
@@ -366,6 +376,17 @@
 				0FA48A4F183DB373004E3A5F /* 返回@2x.png */,
 			);
 			path = 120;
+			sourceTree = "<group>";
+		};
+		0FA78E7B183F0B870080BC02 /* JSChildController */ = {
+			isa = PBXGroup;
+			children = (
+				0FA48A60183DD1C4004E3A5F /* JSAddFamilyViewController.h */,
+				0FA48A61183DD1C4004E3A5F /* JSAddFamilyViewController.m */,
+				0FA78E78183F0B810080BC02 /* JSAddDataViewController.h */,
+				0FA78E79183F0B810080BC02 /* JSAddDataViewController.m */,
+			);
+			name = JSChildController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,6 +475,7 @@
 				0FA48A5C183DB373004E3A5F /* 返回@2x.png in Resources */,
 				0F20B450183C60B7000E3D2A /* JSMainViewController.xib in Resources */,
 				0FA48A53183DB373004E3A5F /* headImage2@2x.png in Resources */,
+				0FA78E801843368D0080BC02 /* Empty.xib in Resources */,
 				0FA48A52183DB373004E3A5F /* headImage1@2x.png in Resources */,
 				0FA48A57183DB373004E3A5F /* headImage6@2x.png in Resources */,
 				0FA48A58183DB373004E3A5F /* line_bg@2x.png in Resources */,
@@ -485,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FA48A41183DB1EB004E3A5F /* JSFamilyCell.m in Sources */,
+				0FA78E7E1840B6000080BC02 /* JSlocalSaveAndRead.m in Sources */,
 				0FA48A62183DD1C4004E3A5F /* JSAddFamilyViewController.m in Sources */,
 				0F01FBAE183A1ED500F38138 /* JSLogoutModel.m in Sources */,
 				0F01FBA8183A1CD000F38138 /* JSLoginModel.m in Sources */,
@@ -500,8 +523,9 @@
 				0F01FBAB183A1D0700F38138 /* JSRegistModel.m in Sources */,
 				0F01FBE7183B184800F38138 /* PNBarChart.m in Sources */,
 				0F01FBE9183B184800F38138 /* PNChartLabel.m in Sources */,
+				0FA78E83184337BE0080BC02 /* JSPointViewController.m in Sources */,
 				0F20B456183C7DBC000E3D2A /* JSRegisterView.m in Sources */,
-				0F20B453183C67D2000E3D2A /* JSLocalDataSave.m in Sources */,
+				0FA78E7A183F0B810080BC02 /* JSAddDataViewController.m in Sources */,
 				0F01FB81183A183300F38138 /* JSAppDelegate.m in Sources */,
 				0F01FBC3183A36EE00F38138 /* JSStartPageViewController.m in Sources */,
 				0F20B45B183CD7CD000E3D2A /* JSFamilyView.m in Sources */,

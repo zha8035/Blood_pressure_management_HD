@@ -9,18 +9,22 @@
 #import "JSFamilyViewController.h"
 #import "JSFamilyCell.h"
 #import "PNColor.h"
+#import "JSlocalSaveAndRead.h"
 @interface JSFamilyViewController ()
 {
     UINavigationController *navi;
     UITableViewController *tableViewController;
     UIButton  *addButton;
     
+    NSInteger membersCount;
+    NSArray *namesArray;
+    NSDictionary *memberDict;
 }
 
 @end
 
 @implementation JSFamilyViewController
-
+@synthesize familyMembers;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,6 +32,11 @@
         // Custom initialization
     }
     return self;
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+    [self reloadData];
 }
 
 - (void)viewDidLoad
@@ -40,7 +49,7 @@
     tableViewController = [[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped];
       tableViewController.tableView.delegate = self;
     tableViewController.tableView.dataSource = self;
-   
+    
 
     //tableViewController.tableView.frame = CGRectMake(200, 44, 768-44, 1024-200);
     tableViewController.tableView.backgroundColor =[UIColor clearColor];
@@ -55,9 +64,35 @@
     
     [self.view addSubview:navi.view];
     
-    
+    if(!familyMembers)
+    {
+        JSAddFamilyViewController *addController = [[JSAddFamilyViewController alloc] init];
+        [addController makeChange];
+        addController.delegate = self;
+        [navi pushViewController:addController animated:YES];
+        navi.navigationBar.hidden=YES;
+    }
+    else
+    {
+        namesArray = [familyMembers allKeys];
+        membersCount = [namesArray count];
+    }
+}
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        JSlocalSaveAndRead *deleteMemberModel = [[JSlocalSaveAndRead alloc] init];
+        [deleteMemberModel deleteMember:[namesArray objectAtIndex:indexPath.row]];
+        [self reloadData];
+        
+    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -76,7 +111,7 @@
 {
     
     // Return the number of rows in the section.
-    return 1;
+    return membersCount;
 }
 
 
@@ -89,6 +124,13 @@
         cell = [[JSFamilyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.textLabel.textColor = [UIColor whiteColor];
         cell.backgroundColor = [UIColor clearColor];
+        NSString *namekey = [namesArray objectAtIndex:indexPath.row];
+        NSDictionary *member = [familyMembers objectForKey:namekey];
+        NSDictionary *memberInfo = [member objectForKey:@"info"];
+        
+        
+        cell.memberInfoDict = memberInfo;
+        [cell makeCell];
         
     }
     //cell.textLabel.text = @"haha";
@@ -98,8 +140,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIViewController *test = [[UIViewController alloc] init];
-    [navi pushViewController:test animated:YES];
+    JSAddFamilyViewController *addController = [[JSAddFamilyViewController alloc] init];
+    NSString *namekey = [namesArray objectAtIndex:indexPath.row];
+    NSDictionary *member = [familyMembers objectForKey:namekey];
+    NSDictionary *memberInfoDict = [member objectForKey:@"info"];
+    addController.memberInfoDict = memberInfoDict;
+    addController.delegate = self;
+    [addController makeChange];
+    
+    [navi pushViewController:addController animated:YES];
     
 }
 
@@ -139,7 +188,19 @@
 - (void)addButtonClick
 {
     JSAddFamilyViewController *addController = [[JSAddFamilyViewController alloc] init];
+    addController.delegate = self;
+    [addController makeChange];
+    
     [navi pushViewController:addController animated:YES];
 }
-
+- (void)reloadData
+{
+    JSlocalSaveAndRead *readModel = [[JSlocalSaveAndRead alloc] init];
+    [readModel read];
+    familyMembers = readModel.familyMembers;
+    
+    namesArray = [familyMembers allKeys];
+    membersCount = [namesArray count];
+    [tableViewController.tableView reloadData];
+}
 @end

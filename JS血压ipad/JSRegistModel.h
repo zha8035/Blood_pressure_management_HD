@@ -9,5 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface JSRegistModel : NSObject
+{
+    NSString *usernameStr;
+    NSString *passwordStr;
+    NSString *emailStr;
+    
+}
 
+@property (nonatomic) NSString *usernameStr;
+@property (nonatomic) NSString *passwordStr;
+@property (nonatomic)  NSString *emailStr;
+
+- (BOOL)asiHttpRequestRegist;
 @end

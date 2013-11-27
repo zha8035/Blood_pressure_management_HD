@@ -28,11 +28,13 @@
         passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(200, 210, 200, 35)];
         passwordTextField.borderStyle = UITextBorderStyleRoundedRect;
         passwordTextField.placeholder = @"请输入密码";
+        passwordTextField.secureTextEntry = YES;
         passwordTextField.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.8];
         
         rePasswordTextField = [[UITextField alloc] initWithFrame:CGRectMake(200, 280, 200, 35)];
         rePasswordTextField.borderStyle = UITextBorderStyleRoundedRect;
         rePasswordTextField.placeholder = @"确认密码";
+        rePasswordTextField.secureTextEntry = YES;
         rePasswordTextField.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.8];
         
         [self addSubview:usernameTextField];

@@ -33,7 +33,49 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    _LoginRegisterView = [[UIView alloc] initWithFrame:CGRectMake(371, 651, 283, 133)];
+    _LoginRegisterView.backgroundColor = PNGreen;
+    
         _LoginRegisterView.layer.cornerRadius = 10;
+    [self.view addSubview:_LoginRegisterView];
+    
+    _UsernameTextField = [[UITextField alloc] initWithFrame:CGRectMake(85, 10, 184, 30)];
+    _UsernameTextField.delegate = self;
+    _UsernameTextField.borderStyle = UITextBorderStyleRoundedRect;
+    [_LoginRegisterView addSubview:_UsernameTextField];
+    
+    _PasswordTextField = [[UITextField alloc] initWithFrame:CGRectMake(85, 48, 184, 30)];
+    _PasswordTextField.delegate = self;
+    _PasswordTextField.borderStyle = UITextBorderStyleRoundedRect;
+    _PasswordTextField.secureTextEntry = YES;
+    [_LoginRegisterView addSubview:_PasswordTextField];
+    
+    UIButton *loginButton = [[UIButton alloc] initWithFrame:CGRectMake(41, 83, 44, 30)];
+    loginButton.backgroundColor = [UIColor clearColor];
+    [loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    loginButton.titleLabel.font = [UIFont systemFontOfSize:22];
+    [loginButton setTitle:@"登录" forState:UIControlStateNormal];
+    [loginButton addTarget:self action:@selector(Login:) forControlEvents:UIControlEventTouchUpInside];
+    [_LoginRegisterView addSubview:loginButton];
+    
+    UIButton *registButton = [[UIButton alloc] initWithFrame:CGRectMake(201, 83, 44, 30)];
+    registButton.backgroundColor =[UIColor clearColor];
+    [registButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    registButton.titleLabel.font = [UIFont systemFontOfSize:22];
+    [registButton setTitle:@"注册" forState:UIControlStateNormal];
+    [registButton addTarget:self action:@selector(register:) forControlEvents:UIControlEventTouchUpInside];
+    [_LoginRegisterView addSubview:registButton];
+    
+    UILabel *titleLabel1 = [[UILabel alloc] initWithFrame:CGRectMake(8, 13, 51, 21)];
+    titleLabel1.text = @"用户名";
+    titleLabel1.textColor = [UIColor whiteColor];
+    [_LoginRegisterView addSubview:titleLabel1];
+    
+    UILabel *titleLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(8, 52, 34, 21)];
+    titleLabel2.text = @"密码";
+    titleLabel2.textColor = [UIColor whiteColor];
+    [_LoginRegisterView addSubview:titleLabel2];
     
     keyboardShowedOrNot = NO;
     isEditingNow = NO;
@@ -77,7 +119,9 @@
 //        tabController.tabBar.hidden = YES;
 //        [self presentViewController:tabController animated:YES completion:nil];
         JSMainViewController *mainView = [[JSMainViewController alloc] init];
+        mainView.familyMembers = loginModel.familyMembers;
         JSNaviMenuController *navItemController = [[JSNaviMenuController alloc] initWithRootViewController:mainView];
+        navItemController.familyMembers = loginModel.familyMembers;
         [self presentViewController:navItemController animated:YES completion:nil];
         
     }
@@ -172,7 +216,25 @@
                 }
                 else
                 {
-                    alertShowOrNot = NO;
+                    
+                    JSRegistModel *registModel = [[JSRegistModel alloc] init];
+                    registModel.usernameStr = registerView.usernameTextField.text;
+                    registModel.passwordStr = registerView.passwordTextField.text;
+                    registModel.emailStr= registerView.EmailTextField.text;
+                    BOOL registOk = [registModel asiHttpRequestRegist];
+                    if(registOk)
+                    {
+                        alertShowOrNot = NO;
+                        JSMainViewController *mainView = [[JSMainViewController alloc] init];
+                        JSNaviMenuController *navItemController = [[JSNaviMenuController alloc] initWithRootViewController:mainView];
+                        
+                        [self presentViewController:navItemController animated:YES completion:nil];
+                        
+                    }
+                    else
+                    {
+                        alertView.message = @"注册失败,请重试";
+                    }
                     
                 }
             }
@@ -194,42 +256,48 @@
     }];
     
 }
-
-
-- (IBAction)editingDidBegin:(UITextField *)sender {
-    
-    
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
     CGRect frame = _LoginRegisterView.frame;
     if(keyboardShowedOrNot == NO)
     {
-    frame.origin.y-=350;
-    [UIView animateWithDuration:0.15 animations:^{
-        _LoginRegisterView.frame=frame;
-    } completion:^(BOOL finished) {
-        
-    }];
+        frame.origin.y-=350;
+        [UIView animateWithDuration:0.15 animations:^{
+            _LoginRegisterView.frame=frame;
+        } completion:^(BOOL finished) {
+            
+        }];
         keyboardShowedOrNot = YES;
         
     }
+
 }
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    
+    if(keyboardShowedOrNot)
+    {
+        [_PasswordTextField resignFirstResponder];
+        [_UsernameTextField resignFirstResponder];
+        CGRect frame = _LoginRegisterView.frame;
+        frame.origin.y=651;
+        [UIView animateWithDuration:0.2 animations:^{
+            _LoginRegisterView.frame=frame;
+        } completion:^(BOOL finished) {
+            
+        }];
+        keyboardShowedOrNot = NO;
+    }
+   
+    return YES;
+
+}
 - (IBAction)editingDidEnd:(UITextField *)sender
 {
     
     
     
-    if(keyboardShowedOrNot)
-    {
-    CGRect frame = _LoginRegisterView.frame;
-    frame.origin.y+=350;
-    [UIView animateWithDuration:0.2 animations:^{
-        _LoginRegisterView.frame=frame;
-    } completion:^(BOOL finished) {
-        
-    }];
-        keyboardShowedOrNot = NO;
-    }
-
 }
 
 - (IBAction)keyboardHideButtonTouched

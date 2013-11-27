@@ -9,11 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface JSLoginModel : NSObject
+{
+    NSDictionary *familyMembers;
+}
 
 @property (nonatomic,weak) NSString *username;
 @property (nonatomic,weak) NSString *password;
 @property (nonatomic,weak) NSString *infoDictionary;
 @property  BOOL status;
+@property (nonatomic) NSDictionary *familyMembers;
 
 - (void)login;
 @end

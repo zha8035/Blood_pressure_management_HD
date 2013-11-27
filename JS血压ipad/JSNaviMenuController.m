@@ -7,7 +7,7 @@
 //
 
 #import "JSNaviMenuController.h"
-
+#import "JSlocalSaveAndRead.h"
 @interface JSNaviMenuController ()
 {
     NSArray *titlesInSection0;
@@ -19,7 +19,7 @@
 @end
 
 @implementation JSNaviMenuController
-
+@synthesize familyMembers;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -55,13 +55,21 @@
     
     self.navigationBar.hidden = YES;
     
+    
 	// Do any additional setup after loading the view.
 }
 
 - (void)homePageClick
 {
+    JSlocalSaveAndRead *readModel = [[JSlocalSaveAndRead alloc] init];
+    [readModel read];
+    familyMembers = readModel.familyMembers;
+    if(familyMembers)
+    {
     [self popToRootViewControllerAnimated:YES];
     isRootViewController = YES;
+    }
+   
 }
 
 - (void)didReceiveMemoryWarning
@@ -98,6 +106,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.textLabel.textColor = [UIColor whiteColor];
         cell.backgroundColor = [UIColor clearColor];
+        
     }
     if(indexPath.section == 0)
     {
@@ -117,12 +126,22 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if(familyMembers)
+    {
     if(indexPath.section==0 && indexPath.row == 0 && isRootViewController == YES)
     {
         JSFamilyViewController *viewCotroller = [[JSFamilyViewController alloc] init];
+        viewCotroller.familyMembers = familyMembers;
         [self pushViewController:viewCotroller animated:YES];
         isRootViewController = NO;
     }
+    }
+    if(indexPath.section==0 && indexPath.row ==2)
+    {
+        JSStartPageViewController *startVC = [[JSStartPageViewController alloc] init];
+        [self presentViewController:startVC animated:YES completion:nil];
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 - (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

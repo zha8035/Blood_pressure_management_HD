@@ -7,23 +7,13 @@
 //
 
 #import "JSBPCell.h"
-#import "PNChart.h"
+
 
 #define cellHight 140
 #define SCREEN_WIDTH 400
 
 @implementation JSBPCell
-{
-    UILabel *BPH_Label;
-    UILabel *BPL_Label;
-    UILabel *HR_Label;
-    UILabel *dateLabel;
-    
-    PNChart *lowBloodChart;
-    PNChart *highBloodChart;
-    PNChart *bloodChart;
-}
-
+@synthesize BPH_Label,BPL_Label,HR_Label,dateLabel;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -115,29 +105,29 @@
 //        [BPChart buildBPbox];
 //        [self.contentView addSubview:BPChart];
         
-        bloodChart = [[PNChart alloc] initWithFrame:CGRectMake(540, 0, SCREEN_WIDTH-110, cellHight)];
-        bloodChart.backgroundColor = [UIColor clearColor];
-        [bloodChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
-        [bloodChart setYValues:@[@"1",@"10",@"2",@"6",@"3"]];
-        [bloodChart strokeChart];
-        [self.contentView addSubview:bloodChart];
-        
-        highBloodChart = [[PNChart alloc] initWithFrame:CGRectMake(30, 0, SCREEN_WIDTH-120,cellHight)];
-        highBloodChart.backgroundColor = [UIColor clearColor];
-        highBloodChart.type = PNBarType;
-        highBloodChart.strokeColor = PNRed;
-        [highBloodChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
-        [highBloodChart setYValues:@[@"1",@"10",@"2",@"6",@"3"]];
-        [highBloodChart strokeChart];
-        [self.contentView addSubview:highBloodChart];
-        
-        lowBloodChart = [[PNChart alloc] initWithFrame:CGRectMake(40, 0, SCREEN_WIDTH-120, cellHight)];
-        lowBloodChart.backgroundColor = [UIColor clearColor];
-        lowBloodChart.type = PNBarType;
-        //[barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
-        [lowBloodChart setYValues:@[@"10",@"16",@"9",@"6",@"3"]];
-        [lowBloodChart strokeChart];
-        [self.contentView addSubview:lowBloodChart];
+//        bloodChart = [[PNChart alloc] initWithFrame:CGRectMake(540, 0, SCREEN_WIDTH-110, cellHight)];
+//        bloodChart.backgroundColor = [UIColor clearColor];
+//        [bloodChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
+//        [bloodChart setYValues:@[@"1",@"10",@"2",@"6",@"3"]];
+//        [bloodChart strokeChart];
+//        [self.contentView addSubview:bloodChart];
+//        
+//        highBloodChart = [[PNChart alloc] initWithFrame:CGRectMake(30, 0, SCREEN_WIDTH-120,cellHight)];
+//        highBloodChart.backgroundColor = [UIColor clearColor];
+//        highBloodChart.type = PNBarType;
+//        highBloodChart.strokeColor = PNRed;
+//        [highBloodChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
+//        [highBloodChart setYValues:@[@"1",@"10",@"2",@"6",@"3"]];
+//        [highBloodChart strokeChart];
+//        [self.contentView addSubview:highBloodChart];
+//        
+//        lowBloodChart = [[PNChart alloc] initWithFrame:CGRectMake(40, 0, SCREEN_WIDTH-120, cellHight)];
+//        lowBloodChart.backgroundColor = [UIColor clearColor];
+//        lowBloodChart.type = PNBarType;
+//        //[barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
+//        [lowBloodChart setYValues:@[@"10",@"16",@"9",@"6",@"3"]];
+//        [lowBloodChart strokeChart];
+//        [self.contentView addSubview:lowBloodChart];
 
 
         
@@ -152,6 +142,49 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+-(void)drawChart:(NSDictionary *)sender
+{
+    [bloodChart removeFromSuperview];
+    NSArray *dates = [sender allKeys];
+    NSMutableArray *BPH = [[NSMutableArray alloc] init];
+    NSMutableArray *BPL = [[NSMutableArray alloc] init];
+    NSMutableArray *HR  = [[NSMutableArray alloc] init];
+    
+    for(int i=0;i<[dates count];i++)
+    {
+        NSDictionary *data = [sender objectForKey:[dates objectAtIndex:i]];
+        NSInteger BPH_Str = [[data objectForKey:@"BPH"]integerValue]/30;
+        NSInteger BPL_Str = [[data objectForKey:@"BPL"]integerValue]/30;
+        NSInteger HR_Str = [[data objectForKey:@"HR"]integerValue]/12;
+        [BPH addObject:[NSString stringWithFormat:@"%i",BPH_Str]];
+        [BPL addObject:[NSString stringWithFormat:@"%i",BPL_Str]];
+        [HR  addObject:[NSString stringWithFormat:@"%i",HR_Str]];
+    }
+    bloodChart = [[PNChart alloc] initWithFrame:CGRectMake(540, 0, SCREEN_WIDTH-110, cellHight)];
+    bloodChart.backgroundColor = [UIColor clearColor];
+    [bloodChart setXLabels:dates];
+    [bloodChart setYValues:HR];
+    [bloodChart strokeChart];
+    [self.contentView addSubview:bloodChart];
+    
+    highBloodChart = [[PNChart alloc] initWithFrame:CGRectMake(30, 0, SCREEN_WIDTH-120,cellHight)];
+    highBloodChart.backgroundColor = [UIColor clearColor];
+    highBloodChart.type = PNBarType;
+    highBloodChart.strokeColor = PNRed;
+    [highBloodChart setXLabels:dates];
+    [highBloodChart setYValues:BPH];
+    [highBloodChart strokeChart];
+    [self.contentView addSubview:highBloodChart];
+    
+    lowBloodChart = [[PNChart alloc] initWithFrame:CGRectMake(40, 0, SCREEN_WIDTH-120, cellHight)];
+    lowBloodChart.backgroundColor = [UIColor clearColor];
+    lowBloodChart.type = PNBarType;
+    //[barChart setXLabels:@[@"SEP 1",@"SEP 2",@"SEP 3",@"SEP 4",@"SEP 5"]];
+    [lowBloodChart setYValues:BPL];
+    [lowBloodChart strokeChart];
+    [self.contentView addSubview:lowBloodChart];
+
 }
 
 @end

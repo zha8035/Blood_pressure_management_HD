@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface JSMainViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+#import "JSAddDataViewController.h"
+@interface JSMainViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,JSAddDatareNewData>
 {
-    NSDictionary *infoDict;
+    
+    NSDictionary *familyMembers;
 }
-@property (nonatomic) NSDictionary *infoDict;
+@property (nonatomic) NSDictionary *familyMembers;
 @end

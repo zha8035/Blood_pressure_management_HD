@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface JSFamilyCell : UITableViewCell
-
+{
+    NSDictionary *memberInfoDict;
+}
+@property (nonatomic) NSDictionary *memberInfoDict;
+- (void)makeCell;
 @end
